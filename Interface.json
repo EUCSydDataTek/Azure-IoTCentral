@@ -1,0 +1,144 @@
+{
+  "@id": "dtmi:demoPrepApp:RoomAtmosphere33p;1",
+  "@type": "Interface",
+  "contents": [
+    {
+      "@id": "dtmi:demoPrepApp:RoomAtmosphere33p:ClimateControlState;1",
+      "@type": [
+        "Telemetry",
+        "State"
+      ],
+      "displayName": {
+        "en": "Climate control state"
+      },
+      "name": "ClimateControlState",
+      "schema": {
+        "@id": "dtmi:demoPrepApp:RoomAtmosphere33p:ClimateControlState:schema;1",
+        "@type": "Enum",
+        "enumValues": [
+          {
+            "@id": "dtmi:demoPrepApp:RoomAtmosphere33p:ClimateControlState:schema:Heating;1",
+            "displayName": {
+              "en": "Heating"
+            },
+            "enumValue": "Heating",
+            "name": "Heating"
+          },
+          {
+            "@id": "dtmi:demoPrepApp:RoomAtmosphere33p:ClimateControlState:schema:Cooling;1",
+            "displayName": {
+              "en": "Cooling"
+            },
+            "enumValue": "Cooling",
+            "name": "Cooling"
+          },
+          {
+            "@id": "dtmi:demoPrepApp:RoomAtmosphere33p:ClimateControlState:schema:Idle;1",
+            "displayName": {
+              "en": "Idle"
+            },
+            "enumValue": "Idle",
+            "name": "Idle"
+          }
+        ],
+        "valueSchema": "string"
+      }
+    },
+    {
+      "@id": "dtmi:demoPrepApp:RoomAtmosphere33p:WarningEvent;1",
+      "@type": [
+        "Telemetry",
+        "Event"
+      ],
+      "displayName": {
+        "en": "Warning event"
+      },
+      "name": "WarningEvent",
+      "schema": "string"
+    },
+    {
+      "@id": "dtmi:demoPrepApp:RoomAtmosphere33p:BuildingID;1",
+      "@type": "Property",
+      "displayName": {
+        "en": "Building ID"
+      },
+      "name": "BuildingID",
+      "schema": "string",
+      "writable": false
+    },
+    {
+      "@id": "dtmi:demoPrepApp:RoomAtmosphere33p:RoomNumber;1",
+      "@type": "Property",
+      "displayName": {
+        "en": "Room number"
+      },
+      "name": "RoomNumber",
+      "schema": "integer",
+      "writable": false
+    },
+    {
+      "@id": "dtmi:demoPrepApp:RoomAtmosphere33p:CleanSystem;1",
+      "@type": "Command",
+      "commandType": "synchronous",
+      "displayName": {
+        "en": "Clean system"
+      },
+      "name": "CleanSystem",
+      "request": {
+        "@type": "CommandPayload",
+        "displayName": {
+          "en": "Cleaning mode"
+        },
+        "name": "CleaningMode",
+        "schema": "string"
+      }
+    },
+    {
+      "@id": "dtmi:demoPrepApp:RoomAtmosphere33p:CurrentTemperature;1",
+      "@type": [
+        "Telemetry",
+        "Temperature"
+      ],
+      "displayName": {
+        "en": "Current temperature"
+      },
+      "name": "CurrentTemperature",
+      "schema": "double",
+      "unit": "degreeFahrenheit"
+    },
+    {
+      "@id": "dtmi:demoPrepApp:RoomAtmosphere33p:CurrentHumidity;1",
+      "@type": [
+        "Telemetry",
+        "Humidity"
+      ],
+      "displayName": {
+        "en": "Current humidity"
+      },
+      "name": "CurrentHumidity",
+      "schema": "double",
+      "unit": "percent"
+    },
+    {
+      "@id": "dtmi:demoPrepApp:RoomAtmosphere33p:TargetTemperature;1",
+      "@type": [
+        "Property",
+        "Temperature"
+      ],
+      "displayName": {
+        "en": "Target temperature"
+      },
+      "name": "TargetTemperature",
+      "schema": "double",
+      "unit": "degreeFahrenheit",
+      "writable": true
+    }
+  ],
+  "displayName": {
+    "en": "Interface"
+  },
+  "@context": [
+    "dtmi:iotcentral:context;2",
+    "dtmi:dtdl:context;2"
+  ]
+}
